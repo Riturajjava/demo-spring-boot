@@ -1,12 +1,24 @@
 package com.demo.model;
 
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Doctor {
+      @Id// Primary key
+       @GeneratedValue
+    Long id;
 
     String name;
     int age;
     String Specialist;
 
-   // Create parameter constructor
+    public Doctor() {
+    }
+
+    // Create parameter constructor
 
 
     public Doctor(String name, int age, String specialist) {
